@@ -1,0 +1,29 @@
+<template name="search">
+  {{#ionView}}
+      <div class="bar bar-header bar-positive">
+        <button id="backArrow" class="button button-icon icon ion-arrow-left-c"></button>
+        <h1 class="title">Search for contact</h1>
+      </div>
+
+      {{#ionContent class="has-header has-footer"}}
+        <label class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input id="searchField" type="search" placeholder="Search">
+        </label>
+        {{#each result}}
+          {{#ionItem}}
+              <h2>{{firstname}} {{lastname}}</h2>
+              <p>Phone number: {{number}}</p>
+              <p>Email: {{email}} </p>
+              <p>Longitude: {{longitude}} </p>
+              <p>Latitude: {{latitude}} </p>
+          {{/ionItem}}
+        {{/each}}
+      {{/ionContent}}
+
+      <div class="bar bar-footer bar-positive">
+        <h1 class="title"></h1>
+        <button id="searchB" class="button button-clear button-right icon ion-ios-search-strong">Search</button>
+      </div>
+    {{/ionView}}
+</template>

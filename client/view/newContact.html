@@ -1,0 +1,47 @@
+<template name="newContact">
+  {{#ionView}}
+  <div class="bar bar-header bar-positive">
+    <h1 class="title">Add a new contact</h1>
+    <!-- <button class="button button-icon icon ion-checkmark"></button> -->
+  </div>
+
+  {{#ionContent class="has-header"}}
+
+  <div class="list">
+    <label class="item item-input">
+      <span class="spanField">Firstname:</span>
+      <input type="text" id="firstName">
+    </label>
+    <label class="item item-input">
+      <span class="spanField">Last name:</span>
+      <input type="text" id="lastName">
+    </label>
+    <label class="item item-input">
+      <span class="spanField">Phone number:</span>
+      <input type="text" id="phoneNumber">
+    </label>
+    <label class="item item-input">
+      <span class="spanField">Email:</span>
+      <input type="text" id="email">
+    </label>
+    <label class="item item-input">
+      <span class="spanField">Gender:</span>
+      <input type="text" id="gender">
+    </label>
+    <label class="item item-input">
+      <span class="spanField">Latitude: </span>
+      <input type="text" value="{{lat}}" id="latitude">
+    </label>
+    <label class="item item-input">
+      <span class="spanField">Longitude: </span>
+      <input  type="text" value="{{long}}" id="longitude">
+    </label>
+  </div> <!--END LIST DIV-->
+  {{/ionContent}}
+  <div class="bar bar-footer bar-positive">
+    <button id="cancelBTN" class="button button-icon icon ion-close"> Cancel</button>
+    <!-- <h1 class="title">Footer</h1> -->
+    <button id="addBTN" class="button button-icon icon-right ion-person-add">  Create </button>
+  </div>
+  {{/ionView}}
+</template>

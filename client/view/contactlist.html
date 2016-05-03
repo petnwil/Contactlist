@@ -1,0 +1,38 @@
+<template name="contactlist">
+{{#ionView}}
+
+  <div class=" bar bar-header bar-positive">
+    <h1 class="title"> Contactlist </h1>
+      <button id="addContact" class="button button-clear buttonRight icon ion-person-add"></button>
+  </div>
+
+    {{#ionContent class="has-header has-footer"}}
+        {{#ionList}}
+
+        {{#if firstnameCheck}}
+          {{#each contacts}}
+            {{#ionItem buttonRight=true}}
+              <h2> {{firstname}} {{lastname}} </h2>
+              <button id="viewContact" class="button button-clear icon ion-ios-telephone"></button>
+            {{/ionItem}}
+          {{/each}}
+        {{else}}
+            {{#each contactsLastName}}
+              {{#ionItem buttonRight=true}}
+                <h2> {{firstname}} {{lastname}} </h2>
+                <button id="viewContact" class="button button-clear icon ion-ios-telephone"></button>
+              {{/ionItem}}
+            {{/each}}
+        {{/if}}
+      {{/ionList}}
+    {{/ionContent}}
+
+    <div class="bar bar-footer bar-positive">
+      <button id="searchButton" class="button button-clear button icon ion-ios-search-strong"> Search
+      </button>
+      <button id="sortButton" class="button button-clear button icon icon-right ion-arrow-swap"> Sort
+      </button>
+    </div>
+
+{{/ionView}}
+</template>

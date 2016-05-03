@@ -1,0 +1,43 @@
+<template name="detailContact">
+  {{#ionView}}
+    {{#ionContent}}
+        <div class=" bar bar-header bar-positive">
+            <h1 class="title"> {{firstName}} </h1>
+            <button id="backToContactList" class="button button-clear icon ion-ios-list-outline"></button>
+        </div>
+    {{/ionContent}}
+
+    {{#ionContent class="has-footer"}}
+    <br>
+    <br>
+      <div class="list card">
+        <div class="item">
+          <h2 id="fullname"> {{firstName}} {{lastName}}</h2>
+          <p> {{phoneNumber}} </p>
+        </div>
+
+      <div class="item item-body">
+        <p> Email: {{email}} </p>
+        <p> Gender: {{gender}}</p>
+        <p>Latitude: {{lat}} </p>
+        <p>Longitude: {{long}} </p>
+
+        <div class="map-container">
+          {{>googleMap name="map" options=mapOptions}}
+        </div>
+      </div>
+
+    </div> <!-- end of list card -->
+    {{/ionContent}}
+
+    {{#ionContent}}
+    <div class="bar bar-footer bar-positive">
+      <button id="deleteButton" class="button button-clear button icon ion-ios-trash"> Delete
+      </button>
+      <button id="editButton" class="button button-clear button icon icon-right ion-edit"> Edit
+      </button>
+    </div>
+    {{/ionContent}}
+
+  {{/ionView}}
+</template>
